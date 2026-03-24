@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  app:
+    build: .
+    container_name: jenkins_test
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    depends_on:
+      - mongo
+      - redis
+    networks:
+      - jenkins
+
+  mongo:
+    image: mongo:7
+    container_name: mongo_container
+    ports:
+      - "27018:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=chaitya
+      - MONGO_INITDB_ROOT_PASSWORD=passwordchaitya
+      - MONGO_INITDB_DATABASE=mydatabase
+    networks:
+      - jenkins
+    volumes:
+      - mydata:/data/db
+
+  redis:
+    image: redis:7
+    container_name: redis_container
+    ports:
+      - "6379:6379"
+    networks:
+      - jenkins
+
+
+networks:
+  jenkins:
+
+volumes:
+  mydata:
+
