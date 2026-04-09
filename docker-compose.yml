@@ -1,6 +1,6 @@
 services:
   app:
-    build: .
+    image: chaitanya057/notes-app:latest 
     container_name: jenkins_test
     ports:
       - "3000:3000"
