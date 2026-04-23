@@ -1,9 +1,9 @@
 services:
   app:
-    image: chaitanya057/notes-app:latest 
+    image: chaitanya057/notes-app:latest
     container_name: jenkins_test
     ports:
-      - "3000:3000"
+      - "4000:5000"
     env_file:
       - .env
     depends_on:
