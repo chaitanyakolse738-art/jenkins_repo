@@ -2,7 +2,7 @@ services:
   app:
     image: chaitanya057/notes-app:latest
     ports:
-      - "4000:5000"
+      - "5000:5000"
     env_file:
       - .env
     depends_on:
