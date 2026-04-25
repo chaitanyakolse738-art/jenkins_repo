@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 5000;
+const port = 3000;
 
 // Simple interactive page
 app.get('/', (req, res) => {
