@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
     </head>
     <body>
         <h1>Welcome to My DevOps Learning App!</h1>
-        <button onclick="document.getElementById('msg').innerText='App running via Docker & Jenkins!'">Click Me</button>
+        <button onclick="document.getElementById('msg').innerText='Version 2 deployed successfully using Jenkins Webhook!'">Click Me</button>
         <div id="msg"></div>
     </body>
     </html>
