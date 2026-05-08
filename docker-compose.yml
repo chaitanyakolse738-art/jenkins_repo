@@ -1,6 +1,6 @@
 services:
   app:
-    image: chaitanya057/notes-app2
+    build: .
     ports:
       - "5000:3000"
     env_file:
